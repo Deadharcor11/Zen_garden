@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.upiicsapm.zen_garden"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.upiicsapm.zen_garden"
