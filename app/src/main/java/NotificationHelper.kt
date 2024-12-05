@@ -14,8 +14,8 @@ import com.upiicsapm.zen_garden.R
 
 class NotificationHelper(val context: Context) {
 
-    private val CHANNEL_ID = "channel_id_example"
-    private val notificationId = 101
+    private val CHANNEL_ID = "Notificacion"
+    private val notificationId = 102
 
     fun createNotification() {
         createNotificationChannel()
@@ -28,8 +28,8 @@ class NotificationHelper(val context: Context) {
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.foco)
-            .setContentTitle("Mi Notificación")
-            .setContentText("¡Hola! Esta es una notificación de ejemplo.")
+            .setContentTitle("¡Tengo sed!")
+            .setContentText("¡Recuerda poner agua a tus plantas")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
@@ -40,13 +40,7 @@ class NotificationHelper(val context: Context) {
                     Manifest.permission.POST_NOTIFICATIONS
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
+
                 return
             }
             notify(notificationId, builder.build())
