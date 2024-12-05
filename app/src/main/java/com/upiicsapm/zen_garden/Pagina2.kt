@@ -28,5 +28,10 @@ class Pagina2 : AppCompatActivity() {
             val intent: Intent = Intent(this, paginacons::class.java)
             startActivity(intent)
         }
+        val btn4: Button = findViewById(R.id.button4)
+        btn4.setOnClickListener{
+            val intent: Intent = Intent(this, paginadecor::class.java)
+            startActivity(intent)
+        }
     }
 }
