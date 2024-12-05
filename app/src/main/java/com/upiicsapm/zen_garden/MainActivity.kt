@@ -1,5 +1,6 @@
 package com.upiicsapm.zen_garden
 
+import NotificationHelper
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, Pagina2::class.java)
             startActivity(intent)
         }
+        val notificationHelper = NotificationHelper(this)
+        notificationHelper.createNotification()
+
 
 
 
